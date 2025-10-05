@@ -1,3 +1,9 @@
 *.sqlite3
 *.pyc
 __pycache__
+# Local environment files
+/env.py
+**/env.py
+.env
+.env.*
+*.env
