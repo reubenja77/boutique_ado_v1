@@ -1,4 +1,4 @@
-#!/Users/reuben/Documents/Reuben Docs/Learning/vscode-projects/boutique_ado_v1/.venv/bin/python3.12
+#!/Users/reuben/Documents/Reuben Docs/Learning/vscode-projects/boutique_ado_v1/.venv/bin/python3
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 
