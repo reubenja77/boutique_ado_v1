@@ -11,12 +11,21 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
 from pathlib import Path
-if os.path.isfile('env.py'):
-    import env
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+ENV_FILE_PATH = BASE_DIR / 'env.py'
 
+if os.path.isfile(ENV_FILE_PATH):
+    import env
+
+# KEEP THIS: These lines read the variables from the environment and assign them to Django settings
+STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY')
+STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
+
+# THIS LINE IS TEMPORARILY:
+# print(f"--- FINAL SECRET KEY CHECK: {os.environ.get('STRIPE_SECRET_KEY')} ---")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
